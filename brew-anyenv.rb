@@ -7,8 +7,6 @@ class Anyenv < Formula
   head "https://github.com/riywo/anyenv.git"
   version "5693de4"
 
-  bottle :unneeded
-
   def install
     inreplace "libexec/anyenv", %Q|ANYENV_ROOT="${HOME}/.anyenv"|, %Q|ANYENV_ROOT="#{prefix}"|
     prefix.install Dir["*"]
