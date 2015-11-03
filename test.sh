@@ -1,7 +1,5 @@
 #!/bin/bash
 
-trap result 0
-
 set -e
 
 if anyenv version; then
@@ -9,6 +7,8 @@ if anyenv version; then
 fi
 
 cp brew-anyenv.rb /usr/local/Library/Formula/anyenv.rb
+
+cat /usr/local/Library/Formula/rbenv.rb
 
 brew install anyenv --HEAD
 
